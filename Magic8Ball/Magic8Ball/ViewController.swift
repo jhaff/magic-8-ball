@@ -40,6 +40,12 @@ class ViewController: UIViewController {
         
     }
 
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        guard motion == .motionShake else { return }
+        
+        generateAnswer()
+    }
+    
 }
 
 
